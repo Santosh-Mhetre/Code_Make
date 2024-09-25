@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
+  
 
 <!-- Mirrored from cavistar.websitelayout.net//html/blog-grid.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 16 Sep 2024 04:48:45 GMT -->
 <head>
@@ -26,6 +26,8 @@
 
     <!-- Theme CSS -->
     <link href="assets/css/theme.css" rel="stylesheet">
+
+    
 
 </head>
 
@@ -115,79 +117,156 @@
 
         <!-- TITLE
         ================================================== -->
-        <section id="portfolio" class="portfolio">
-            <div class="container" style="margin-top: 80px;">
-              <div class="section-title" style="text-align: center;">
-                <h2>Product</h2>
-                <p>Check our Product</p>
-              </div>
-          
-              <div class="row">
-                <div class="col-lg-12 d-flex justify-content-center">
-                  <ul id="portfolio-filters" class="list-inline">
-                    <li class="list-inline-item filter-active" onclick="filterPortfolio('all')">All</li>
-                    <li class="list-inline-item" onclick="filterPortfolio('E-commerce')">E-commerce</li>
-                    <li class="list-inline-item" onclick="filterPortfolio('ERP')">ERP</li>
-                    <li class="list-inline-item" onclick="filterPortfolio('HealthCare')">HealthCare</li>
-                    <li class="list-inline-item" onclick="filterPortfolio('Insurance')">Insurance</li>
-                  </ul>
-                </div>
-              </div>
-          
-              <div class="row portfolio-container">
-                <!-- Portfolio items go here -->
-                <div class="col-lg-4 col-md-6 portfolio-item filter-E-commerce">
-                  <img src="p1.jpg" class="img-fluid" alt="">
-                  <div class="portfolio-info">
-                    <h4>E-commerce</h4>
-                    <p>Cultivate convenience, inspire confidence, and elevate experiences - your gateway to seamless commerce in the digital realm.</p>
-                    <a href="p1.jpg" class="portfolio-lightbox preview-link" title="App 1"><i class="bx bx-plus"></i></a>
-                    <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-                  </div>
-                </div>
-          
-                <div class="col-lg-4 col-md-6 portfolio-item filter-E-commerce">
-                  <img src="p2.jpg" class="img-fluid" alt="">
-                  <div class="portfolio-info">
-                    <h4>E-commerce</h4>
-                    <p>Empower your business with our cutting-edge Ecommerce solutions, tailored to amplify your online presence and drive unprecedented growth in the digital marketplace.</p>
-                    <a href="p2.jpg" class="portfolio-lightbox preview-link" title="App 2"><i class="bx bx-plus"></i></a>
-                    <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-                  </div>
-                </div>
-          
-                <div class="col-lg-4 col-md-6 portfolio-item filter-ERP">
-                  <img src="p3.jpg" class="img-fluid" alt="">
-                  <div class="portfolio-info">
-                    <h4>ERP</h4>
-                    <p>Unlock the full potential of your business with our ERP solutions, seamlessly integrating processes, optimizing workflows, and providing real-time insights for smarter, more efficient operations.</p>
-                    <a href="p3.jpg" class="portfolio-lightbox preview-link" title="App 3"><i class="bx bx-plus"></i></a>
-                    <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-                  </div>
-                </div>
-          
-                <!-- Add other portfolio items as necessary -->
-              </div>
-            </div>
-          </section>
-          
-          <script>
-            function filterPortfolio(category) {
-              var items = document.getElementsByClassName('portfolio-item');
-              for (var i = 0; i < items.length; i++) {
-                if (category === 'all' || items[i].classList.contains('filter-' + category)) {
-                  items[i].style.display = 'block';
-                } else {
-                  items[i].style.display = 'none';
-                }
-              }
-          
-              // Update active class on filter buttons
-              var filterButtons = document.querySelectorAll('#portfolio-filters li');
-              filterButtons.forEach(button => button.classList.remove('filter-active'));
-              document.querySelector(`#portfolio-filters li[onclick="filterPortfolio('${category}')"]`).classList.add('filter-active');
-            }
-          </script>
+      <!-- TITLE
+================================================== -->
+<section class="portfolio py-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="text-center mb-5">
+          <h2 class="font-weight-bold">Our Products</h2>
+          <p class="text-muted">Explore our range of innovative solutions</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="row mb-4">
+      <div class="col-lg-12 d-flex justify-content-center">
+        <ul id="portfolio-filters" class="list-inline">
+          <li class="list-inline-item">
+            <button class="btn btn-outline-primary active" onclick="filterPortfolio('all')">All</button>
+          </li>
+          <li class="list-inline-item">
+            <button class="btn btn-outline-primary" onclick="filterPortfolio('E-commerce')">E-commerce</button>
+          </li>
+          <li class="list-inline-item">
+            <button class="btn btn-outline-primary" onclick="filterPortfolio('ERP')">ERP</button>
+          </li>
+          <li class="list-inline-item">
+            <button class="btn btn-outline-primary" onclick="filterPortfolio('HealthCare')">HealthCare</button>
+          </li>
+          <li class="list-inline-item">
+            <button class="btn btn-outline-primary" onclick="filterPortfolio('Insurance')">Insurance</button>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="row portfolio-container">
+      <div class="col-lg-4 col-md-6 mb-4 portfolio-item filter-E-commerce">
+        <div class="card h-100 shadow-sm">
+          <img src="assets/img/content/p1.png" class="card-img-top" alt="E-commerce Product">
+          <div class="card-body">
+            <h5 class="card-title">E-commerce Solution</h5>
+            <p class="card-text">Cultivate convenience, inspire confidence, and elevate experiences - your gateway to seamless commerce in the digital realm.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 mb-4 portfolio-item filter-E-commerce">
+        <div class="card h-100 shadow-sm">
+          <img src="assets/img/content/p2.png" class="card-img-top" alt="E-commerce Product">
+          <div class="card-body">
+            <h5 class="card-title">Advanced E-commerce Platform</h5>
+            <p class="card-text">Empower your business with our cutting-edge Ecommerce solutions, tailored to amplify your online presence and drive unprecedented growth in the digital marketplace.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 mb-4 portfolio-item filter-ERP">
+        <div class="card h-100 shadow-sm">
+          <img src="assets/img/content/p3.png" class="card-img-top" alt="ERP Solution">
+          <div class="card-body">
+            <h5 class="card-title">Comprehensive ERP System</h5>
+            <p class="card-text">Unlock the full potential of your business with our ERP solutions, seamlessly integrating processes, optimizing workflows, and providing real-time insights for smarter, more efficient operations. Elevate your enterprise to new heights with our cutting-edge ERP technology.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 mb-4 portfolio-item filter-ERP">
+        <div class="card h-100 shadow-sm">
+          <img src="assets/img/content/p4.png" class="card-img-top" alt="ERP Solution">
+          <div class="card-body">
+            <h5 class="card-title">Strategic ERP Implementation</h5>
+            <p class="card-text">Transform your business operations with our cutting-edge ERP solution, streamlining processes, enhancing efficiency, and driving strategic decision-making for sustainable growth and competitive advantage.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 mb-4 portfolio-item filter-HealthCare">
+        <div class="card h-100 shadow-sm">
+          <img src="assets/img/content/p5.png" class="card-img-top" alt="Healthcare Solution">
+          <div class="card-body">
+            <h5 class="card-title">Innovative Healthcare Technology</h5>
+            <p class="card-text">Transforming healthcare through innovation, our solutions prioritize patient-centric care, operational efficiency, and data-driven insights. Empower your healthcare journey with our advanced technology, ensuring a healthier and connected future for all.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 mb-4 portfolio-item filter-HealthCare">
+        <div class="card h-100 shadow-sm">
+          <img src="assets/img/content/p6.png" class="card-img-top" alt="Healthcare Solution">
+          <div class="card-body">
+            <h5 class="card-title">Advanced Healthcare Management</h5>
+            <p class="card-text">Transforming healthcare delivery with our innovative solutions, focused on improving patient outcomes, enhancing operational efficiency, and fostering collaboration across the healthcare ecosystem.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 mb-4 portfolio-item filter-Insurance">
+        <div class="card h-100 shadow-sm">
+          <img src="assets/img/content/p7.png" class="card-img-top" alt="Insurance Solution">
+          <div class="card-body">
+            <h5 class="card-title">Comprehensive Insurance Platform</h5>
+            <p class="card-text">Navigate the complexities of risk management with our tailored insurance solutions. We safeguard your future by providing comprehensive coverage, innovative risk assessments, and personalized service, ensuring peace of mind in an ever-changing world.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 mb-4 portfolio-item filter-Insurance">
+        <div class="card h-100 shadow-sm">
+          <img src="assets/img/content/p8.png" class="card-img-top" alt="Insurance Solution">
+          <div class="card-body">
+            <h5 class="card-title">Personalized Insurance Services</h5>
+            <p class="card-text">Secure your future with our tailored insurance solutions, providing peace of mind and financial protection against life's uncertainties. From comprehensive coverage to personalized advice, we're here to safeguard what matters most to you.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 mb-4 portfolio-item filter-E-commerce">
+        <div class="card h-100 shadow-sm">
+          <img src="assets/img/content/p9.png" class="card-img-top" alt="E-commerce Solution">
+          <div class="card-body">
+            <h5 class="card-title">Integrated E-commerce Service</h5>
+            <p class="card-text">Empower your business with our comprehensive Ecommerce service, where technology meets seamless customer experiences to drive growth and success in the digital marketplace.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 mb-4 portfolio-item filter-HealthCare">
+        <div class="card h-100 shadow-sm">
+          <img src="assets/img/content/p10.png" class="card-img-top" alt="Healthcare Solution">
+          <div class="card-body">
+            <h5 class="card-title">Next-Gen Healthcare Solutions</h5>
+            <p class="card-text">Transform healthcare delivery with our innovative solutions, leveraging cutting-edge technology to improve patient outcomes, optimize operational efficiency, and empower healthcare professionals to deliver exceptional care with compassion and precision.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 mb-4 portfolio-item filter-ERP">
+        <div class="card h-100 shadow-sm">
+          <img src="assets/img/content/p11.png" class="card-img-top" alt="ERP Solution">
+          <div class="card-body">
+            <h5 class="card-title">Integrated ERP Solution</h5>
+            <p class="card-text">Streamline your business operations and enhance productivity with our comprehensive ERP solution, designed to integrate seamlessly across all departments and provide real-time insights for informed decision-making.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+        
+       
           
 
         <!-- FOOTER
@@ -291,6 +370,41 @@
 
     <!-- Theme JS -->
     <script src="assets/js/theme.js"></script>
+
+    <script>
+      function filterPortfolio(category) {
+        const items = document.getElementsByClassName('portfolio-item');
+        const buttons = document.querySelectorAll('#portfolio-filters button');
+    
+        for (let item of items) {
+          if (category === 'all' || item.classList.contains('filter-' + category)) {
+            item.style.display = 'block';
+          } else {
+            item.style.display = 'none';
+          }
+        }
+    
+        for (let button of buttons) {
+          if (button.textContent.toLowerCase() === category || (category === 'all' && button.textContent === 'All')) {
+            button.classList.add('active');
+          } else {
+            button.classList.remove('active');
+          }
+        }
+      }
+    
+      // Initialize lightbox for portfolio images
+      document.addEventListener('DOMContentLoaded', function() {
+        const lightboxElements = document.querySelectorAll('[data-toggle="lightbox"]');
+        lightboxElements.forEach(el => {
+          el.addEventListener('click', function(e) {
+            e.preventDefault();
+            // You may need to include a lightbox library like ekko-lightbox or fancybox
+            // and initialize it here
+          });
+        });
+      });
+    </script>
 
 </body>
 
